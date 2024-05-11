@@ -21,9 +21,16 @@ async function loadModel() {
     console.log("model loaded")
     return model
   } catch {
-    const model = await tf.loadLayersModel(
-      `${process.env.URL}/api/file/model.json`
-    )
+    let model
+    try {
+      model = await tf.loadLayersModel(
+        `https://${window.location.host}/api/file/model.json`
+      )
+    } catch {
+      model = await tf.loadLayersModel(
+        `http://${window.location.host}/api/file/model.json`
+      )
+    }
     model.save("indexeddb://drawnum-model")
     console.log("model loaded")
     return model
