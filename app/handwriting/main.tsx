@@ -176,10 +176,12 @@ export default function Main() {
         </div>
       </Card>
       <span className="text-xs text-muted-foreground font-semibold uppercase mt-2">
-        Tensorflow • Made with ❤️ by Hursh •{" "}
+        <div className="flex flex-col gap-3 items-center md:flex-col md:gap-1">
+        <span>Tensorflow • Made with ❤️ by Hursh •</span>
         <Link className="decoration underline" href="/">
           useless
         </Link>
+          </div>
       </span>
     </main>
   )
