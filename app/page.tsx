@@ -133,10 +133,12 @@ export default function Home() {
       </Card>
 
       <span className="text-xs text-muted-foreground font-semibold uppercase mt-2">
-        Tensorflow • Made with ❤️ by Hursh •{" "}
-        <Link className="decoration underline" href="/handwriting">
-          handwriting
-        </Link>
+        <div className="flex flex-col gap-3 items-center md:flex-row md:gap-1">
+          <span>Tensorflow • Made with ❤️ by Hursh</span>
+          <Link className="decoration underline" href="/handwriting">
+            handwriting
+          </Link>
+        </div>
       </span>
     </main>
   )
